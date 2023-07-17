@@ -27,12 +27,21 @@
  * 	Fax: (201) 236-3290
 */ 
 
-// not included in book text, but used by programs in this directory
-#ifndef LOCALMATH_H
-#define LOCALMATH_H
+#include <iostream>
+using std::cout; using std::endl;
 
-//definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
-int gcd(int, int);    // find greatest common divisor
-#endif
+// get returns a reference to an element in the given array
+int &get(int *arry, int index) { return arry[index]; }
+
+int main() {
+    int ia[10];  // array of ten uninitialized ints
+
+    for (int i = 0; i != 10; ++i)
+        get(ia, i) = i;  // call get to assign values to the elements
+
+	for (auto i : ia)    // print the elements
+		cout << i << " ";
+	cout << endl;
+
+	return 0;
+}

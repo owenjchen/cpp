@@ -27,12 +27,19 @@
  * 	Fax: (201) 236-3290
 */ 
 
-// not included in book text, but used by programs in this directory
-#ifndef LOCALMATH_H
-#define LOCALMATH_H
+#ifndef PRINTFCNS_H
+#define PRINTFCNS_H
+#include <vector>
+void print(const char *cp);
+void print(const int *beg, const int *end); 
+void print(std::vector<int>::const_iterator beg,
+           std::vector<int>::const_iterator end);
+void print(const int ia[], size_t size);
+void print(const std::vector<int>&);
 
-//definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
-int gcd(int, int);    // find greatest common divisor
+inline foo() {
+int j[2] = {0,1};
+print("Hello World");        // calls print(const char*)
+print(j, end(j) - begin(j)); // calls print(const int*, size_t)
+print(begin(j), end(j));     // calls print(const int*, const int*)
 #endif

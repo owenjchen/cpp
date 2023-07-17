@@ -27,12 +27,32 @@
  * 	Fax: (201) 236-3290
 */ 
 
-// not included in book text, but used by programs in this directory
-#ifndef LOCALMATH_H
-#define LOCALMATH_H
+#include <iostream>
+#include <array>
+#include <chrono>
+using namespace std;
+using namespace std::chrono;
+// declarations of our factorial functions
+// definitions are in LocalMath.cc
+#include "LocalMath.h"
 
-//definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
-int gcd(int, int);    // find greatest common divisor
-#endif
+int main()
+{
+	array<int, 9>  n{0, 5, 6, 7, 8, 9, 10, 20, 40};
+	//Version 1 - while loop
+	auto time_start = high_resolution_clock::now();
+	cout << "Factorial function - Version 1: fact() - while loop" << endl;
+	for(int i:n) cout << i <<  "! = " << factorial(i) << endl;
+	auto run_time = duration_cast<microseconds>(high_resolution_clock::now() - time_start);
+	cout << "Elapsed Time = " << run_time.count() << " microseconds (1/million seconds)" << endl;
+
+	//Version 2 - recursive function
+	time_start = high_resolution_clock::now();
+	cout << "Factorial function - Version 2: factorial() - recursive function" << endl;	
+	for(int i:n) cout << i <<  "! = " << fact(i) << endl;
+	run_time = duration_cast<microseconds>(high_resolution_clock::now() - time_start);
+	cout << "Elapsed Time = " << run_time.count() << " microseconds (1/million seconds)" << endl;	
+
+	return 0;
+}
+

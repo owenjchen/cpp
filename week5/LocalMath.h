@@ -32,7 +32,7 @@
 #define LOCALMATH_H
 
 //definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
+long fact(int);        // iterative definition of factorial
+long factorial(int);   // recrusive version of factorial
 int gcd(int, int);    // find greatest common divisor
 #endif

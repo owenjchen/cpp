@@ -28,7 +28,7 @@
 */ 
 
 #include <iostream>
-using std::cout; using std::endl;
+using namespace std;
 
 // declarations of our factorial functions
 // definitions are in LocalMath.cc

@@ -27,12 +27,16 @@
  * 	Fax: (201) 236-3290
 */ 
 
-// not included in book text, but used by programs in this directory
-#ifndef LOCALMATH_H
-#define LOCALMATH_H
-
-//definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
-int gcd(int, int);    // find greatest common divisor
-#endif
+#include <cstdlib>
+/* EXIT_FAILURE and EXIT_SUCCESS are preprocessor variables
+ *       such variables are not in the std namespace, 
+ *       hence, no using declaration and no std:: when we use these names
+*/
+int main()
+{
+    bool some_failure = false;
+    if (some_failure)
+        return EXIT_FAILURE;  // defined in cstdlib
+    else
+        return EXIT_SUCCESS;  // defined in cstdlib
+}

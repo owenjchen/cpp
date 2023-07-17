@@ -27,12 +27,35 @@
  * 	Fax: (201) 236-3290
 */ 
 
-// not included in book text, but used by programs in this directory
-#ifndef LOCALMATH_H
-#define LOCALMATH_H
+#include "LocalMath.h"
 
-//definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
-int gcd(int, int);    // find greatest common divisor
-#endif
+// return the greatest common divisor
+int gcd(int v1, int v2)
+{
+    while (v2) {
+        int temp = v2;
+        v2 = v1 % v2;
+        v1 = temp;
+    }
+    return v1;
+}
+
+
+// factorial of val is val * (val - 1) *  (val - 2) . . . * ((val -  (val - 1)) * 1)
+long fact(int val)
+{
+	long ret = 1; // local variable to hold the result as we calculate it
+	while (val > 1) 
+		ret *= val--;  // assign ret * val to ret and decrement val
+	return ret;        // return the result
+}
+
+// recursive version of factorial:
+// calculate val!, which is 1 * 2 * 3 . . . * val
+long factorial(int val)
+{
+    if (val > 1)
+        return factorial(val-1) * val;
+    return 1;
+}
+

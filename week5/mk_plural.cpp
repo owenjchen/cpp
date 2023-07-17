@@ -27,12 +27,24 @@
  * 	Fax: (201) 236-3290
 */ 
 
-// not included in book text, but used by programs in this directory
-#ifndef LOCALMATH_H
-#define LOCALMATH_H
+#include <cstddef>
+using std::size_t;
 
-//definition in LocalMath.cpp
-int fact(int);        // iterative definition of factorial
-int factorial(int);   // recrusive version of factorial
-int gcd(int, int);    // find greatest common divisor
-#endif
+#include <string>
+using std::string;
+
+#include <iostream>
+using std::cout; using std::endl;
+
+#include "make_plural.h"
+
+int main()
+{
+	size_t cnt = 1;
+	cout << make_plural(cnt, "success", "es") << endl;
+
+	cnt = 2;
+	cout << make_plural(cnt, "failure", "s") << endl;
+
+	return 0;
+}
