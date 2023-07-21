@@ -55,9 +55,7 @@ and
     input: int 
     output: bool
 
-## 8) Write a program that will produce a list of prime numbers that are less than a given input integer.
-
-Use isPrime() function in 7) if needed.  
+## 8) Write a program that will produce a list of prime numbers that are less than a given input integer. Use isPrime() function in 7) if needed.  
 
     function name: prime_list()
     input: int n
