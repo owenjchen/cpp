@@ -38,24 +38,30 @@ and
     (d) sum(vec.begin(), vec.end(), 3.8);
 
 ## 5) Write a function that will calculate all factors of an integer
+
     function name: factor()
     input: int n
     output: a vector of integers with each element being a unique factor of n
 
 ## 6) Write a function that will calculate the GCD (greated common divisor) of two integers. Use factor() function defined in 5)
+
     function name: gcd()
     input: int a, int b
     output: gcd of (a, b)
 
 ## 7) Write a function that determines whether an input integer is a prime or not.
+
     function name: isPrime()
     input: int 
     output: bool
 
 ## 8) Write a program that will produce a list of prime numbers that are less than a given input integer.
-Use isPrime() function in 7) if needed.
+
+Use isPrime() function in 7) if needed.  
+
     function name: prime_list()
     input: int n
     output: a list of prime numbers that are less than or equal to n
 
-    main program: prompt user to enter a number and store it as integer n.  Call prime_list() and print the list of primes on screen.
+main program: prompt user to enter a number and store it as integer n.  
+Call prime_list() and print the list of primes on screen.
