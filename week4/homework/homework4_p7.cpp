@@ -8,11 +8,11 @@ int main(){
     string s;
     vector<string> sv;
     // Read a line from a user prompt;
-    cout << "Please enter integers (Ctrl-D to end):" << endl;
+    cout << "Please enter strings (Ctrl-D to end):" << endl;
     while(cin >> s) {
         sv.push_back(s);
     }
-    cout << "Here are the elements of the integer vector stored:" << endl;
+    cout << "Here are the elements of the string vector stored:" << endl;
     for(auto i: sv) {
         cout << i << endl;
     }

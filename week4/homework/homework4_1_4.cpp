@@ -23,6 +23,7 @@ int main(){
     vector<int> v5{10, 42};
     vector<string> v6{10};
     vector<string> v7{10, "hi"};
+    vector<string> v8{"10"};
 
     cout << "v1:" << v1.size() << endl;
     for (auto i : v1) cout << i << " ";
@@ -50,6 +51,10 @@ int main(){
 
     cout << "v7:" << v7.size() << endl;
     for (auto i : v7) cout << i << " ";
+    cout << endl;
+
+    cout << "v8:" << v8.size() << endl;
+    for (auto i : v8) cout << i << " ";
     cout << endl;
 
     // Problem 4)

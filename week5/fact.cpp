@@ -42,17 +42,15 @@ int main()
 	//Version 1 - while loop
 	auto time_start = high_resolution_clock::now();
 	cout << "Factorial function - Version 1: fact() - while loop" << endl;
-	for(int i:n) cout << i <<  "! = " << factorial(i) << endl;
+	for(int i:n) cout << i <<  "! = " << fact(i) << endl;
 	auto run_time = duration_cast<microseconds>(high_resolution_clock::now() - time_start);
 	cout << "Elapsed Time = " << run_time.count() << " microseconds (1/million seconds)" << endl;
 
 	//Version 2 - recursive function
 	time_start = high_resolution_clock::now();
 	cout << "Factorial function - Version 2: factorial() - recursive function" << endl;	
-	for(int i:n) cout << i <<  "! = " << fact(i) << endl;
+	for(int i:n) cout << i <<  "! = " << factorial(i) << endl;
 	run_time = duration_cast<microseconds>(high_resolution_clock::now() - time_start);
 	cout << "Elapsed Time = " << run_time.count() << " microseconds (1/million seconds)" << endl;	
-
-	return 0;
 }
 
