@@ -61,7 +61,7 @@ Use isPrime() function in 7) if needed.
 
     function name: prime_list()
     input: int n
-    output: a list of prime numbers that are less than or equal to n
+    output: a list of prime numbers
 
-main program: prompt user to enter a number and store it as integer n.  
+Main program: prompt user to enter a number and store it as integer n.  
 Call prime_list() and print the list of primes on screen.
