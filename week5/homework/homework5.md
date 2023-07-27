@@ -1,7 +1,6 @@
 # Homework Week 5
 
-## 1) Indicate which of the following functions are in error and why. Suggest
-how you might correct the problems.
+## 1) Indicate which of the following functions are in error and why. Suggest how you might correct the problems.
 
     (a) int f() {
         string s;
