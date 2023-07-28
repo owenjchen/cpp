@@ -4,6 +4,7 @@ int main()
 {
     Student st1;
     cout << "Student 1 (default values):" << endl;
+    //st1.name = "new name";
     st1.printInfo();    
     st1.setName("John");
     st1.setBirthyear(2008);

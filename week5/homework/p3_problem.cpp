@@ -11,7 +11,7 @@ void print(const int ia[10])
 int main()
 {
     int my_numbers[5];
-    for(int i; i < 5; i++) {
+    for(int i=0; i < 5; i++) {
         my_numbers[i] = i;
     }
     print(my_numbers);

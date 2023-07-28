@@ -36,13 +36,13 @@ int gcd(int a, int b) {
     while (*factor_a != *factor_b){
         if (*factor_a > *factor_b) {
             if (factor_a != factors_a.end()) {
-                factor_a = std::next(factor_a);
+                factor_a = next(factor_a);
             } else {
                 break;
             } 
         } else {
             if (factor_b != factors_b.end()) {
-                factor_b = std::next(factor_b);
+                factor_b = next(factor_b);
             } else {
                 break;
             }    

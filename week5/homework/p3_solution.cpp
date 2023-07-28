@@ -10,6 +10,8 @@ void print(const int ia[], int size)
 
 int main()
 {
+    int n = 0;
+
     int my_numbers[20];
     for(int i; i < 20; i++) {
         my_numbers[i] = i;

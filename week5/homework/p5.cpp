@@ -10,6 +10,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+vector<int> factor(int n);
+
 vector<int> factor(int n) {
     vector<int> factors;
     for (int i = 1; i <= sqrt(n); i++) {
