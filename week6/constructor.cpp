@@ -1,18 +1,60 @@
 #include <iostream>
+#include <string>
 #include <cstring>
 
 using namespace std;
 
-class Student
+
+class Person
 {
   private:
-    char name[4];
+    string name;
     int born;
     bool male; 
   public:
     Student()
     {
-        name[0] = 0;
+        name = "";
+        born = 0;
+        male = false;
+        cout << "Constructor: Person()" << endl;
+    }
+    Student(const char * initName): born(0), male(true)
+    {
+        setName(initName);
+        cout << "Constructor: Person(const char*)" << endl;
+    }
+    Student(const char * initName, int initBorn, bool isMale)
+    {
+        setName(initName);
+        born = initBorn;
+        male = isMale;
+        cout << "Constructor: Person(const char, int , bool)" << endl;
+    }
+
+    void setName(const char * s)
+    {
+        strncpy(name, s, sizeof(name));
+    }
+    void setBorn(int b)
+    {
+        born = b;
+    }
+    // the declarations, the definitions are out of the class
+    void setGender(bool isMale);
+    void printInfo();
+};
+
+class Student
+{
+  private:
+    string name;
+    int born;
+    bool male; 
+  public:
+    Student()
+    {
+        name = "";
         born = 0;
         male = false;
         cout << "Constructor: Person()" << endl;
