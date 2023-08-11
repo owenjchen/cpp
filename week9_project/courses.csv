@@ -1,0 +1,12 @@
+#id, name, category
+200, Math III, math
+201, Pre-Calculus,math
+202, Calculus A/B, math
+211, C++ Programming, computer
+212, Python Programming, computer
+301, English I, ELA
+302, English II, ELA
+304, Writing I, ELA
+305, Writing II, ELA
+310, American History, history
+311, World History, history

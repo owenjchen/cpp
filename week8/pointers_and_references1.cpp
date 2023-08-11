@@ -15,7 +15,7 @@ int main() {
     cout << "p2 = " << p2 << endl;       
     cout << "d = " << d << endl;   
     cout << "*p2 = " << *p2 << endl; 
-    void* p3 = &n;
+    void* p3 = &n;`
     cout << "p3 = " << p3 << endl;
     cout << "*p3= " << *(int*)p3 << endl;
 
